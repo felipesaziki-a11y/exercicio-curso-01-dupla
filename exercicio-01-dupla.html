@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/exercicio-01.css">
+    <title>Exercício 01 Compra</title>
+</head>
+
+<body>
+    <div id="exercicio-01">
+        <div id="campo-nome-cliente">
+            <label for="campo-nome">Nome</label>
+            <input type="text" id="campo-nome">
+        </div>
+        <div id="campo-escolher-produto">
+            <label for="campo-produto">Escolha um produto</label>
+            <select id="campo-produto">
+                <option value="">---</option>
+                <option value="sabao-po">Sabão em pó</option>
+                <option value="sabonete-liquido">Sabonete líquido</option>
+                <option value="pao-frances">Pão francês</option>
+                <option value="refrigerante">Refrigerante</option>
+            </select>
+        </div>
+        <div id="campo-escolher-quantidade">
+            <label for="campo-quantidade">Quantidade</label>
+            <input type="number" id="campo-quantidade" min="1" max="99">
+        </div>
+        <div id="campo-escolher-cupom">
+            <label for="campo-deseja-cupom">Deseja um cupom de desconto? Sim</label>
+            <input type="checkbox" id="campo-deseja-cupom" name="campo-tipo" value="sim" onchange="mostrarCupom()">
+            <div id="campo-cupom" class="oculto">
+                <h3>Cupom 10% de Desconto</h3>
+            </div>
+        </div>
+        <button onclick="calcularTotal()">Calcular total</button>
+        <button onclick="limparLista()">Limpar</button>
+        <div id="campo-resultado" class="oculto">
+            <div>
+                <label for="campo-total">Resultado</label>
+            </div>
+            <textarea id="campo-total" readonly disabled></textarea>
+        </div>
+    </div>
+    <script src="assets/js/exercicio-01.js"></script>
+</body>
+
+</html>
